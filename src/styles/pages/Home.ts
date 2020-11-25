@@ -1,12 +1,16 @@
 import styled from 'styled-components'
-import searchIconImg from '../../assets/searchIcon.png'
+import { darken } from 'polished'
 
 export const Container = styled.div`
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  max-width: 100vw;
+  max-height: 100vh;
+
   position: relative;
-  align-items: center;
 
   display: flex;
-  flex-direction: column;
 
   h1 {
     position: absolute;
@@ -38,16 +42,16 @@ export const Container = styled.div`
 
   p {
     position: absolute;
+
     width: 501px;
     height: 96px;
+
     left: 108px;
     top: 510px;
 
     font-family: Visby Round CF;
-    font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 25px;
-    line-height: 30px;
     text-align: justify;
 
     color: #ffffff;
@@ -55,49 +59,52 @@ export const Container = styled.div`
 `
 
 export const BackgroundImg = styled.img`
-  width: 100vw;
-  height: 100vh;
+  width: 110vw;
+  height: 120vh;
 
   position: relative;
+
+  z-index: 0;
+  /* bottom: -10px; */
 `
 
+export const AsideMenu = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+`
 export const DropMenuIcon = styled.img`
   position: absolute;
   width: 34px;
   height: 33px;
   left: 102px;
   top: 78px;
+
+  :hover {
+    opacity: 0.7;
+  }
 `
 
-export const HomeLink = styled.h3`
+export const TopBar = styled.div`
   position: absolute;
-  width: 87px;
-  height: 36px;
-  left: 693px;
-  top: 75px;
-`
-export const SmoothiesLink = styled.h3`
-  position: absolute;
-  width: 152px;
-  height: 36px;
-  left: 841px;
-  top: 75px;
-`
+  top: 70px;
+  left: 700px;
 
-export const AboutLink = styled.h3`
-  position: absolute;
-  width: 89px;
-  height: 36px;
-  left: 1054px;
-  top: 75px;
-`
+  justify-content: center;
+  align-items: center;
 
-export const ContactLink = styled.h3`
-  position: absolute;
-  width: 114px;
-  height: 36px;
-  left: 1204px;
-  top: 75px;
+  justify-content: space-between;
+
+  width: 900px;
+  height: 49px;
+
+  display: flex;
+
+  h3 {
+    :hover {
+      opacity: 0.7;
+    }
+  }
 `
 
 export const FacebookIcon = styled.img`
@@ -108,6 +115,10 @@ export const FacebookIcon = styled.img`
 
   width: 15px;
   height: 30px;
+
+  :hover {
+    opacity: 0.4;
+  }
 `
 
 export const TwitterIcon = styled.img`
@@ -118,6 +129,10 @@ export const TwitterIcon = styled.img`
 
   width: 26px;
   height: 21px;
+
+  :hover {
+    opacity: 0.4;
+  }
 `
 
 export const InstagramIcon = styled.img`
@@ -128,9 +143,15 @@ export const InstagramIcon = styled.img`
 
   width: 28px;
   height: 28px;
+
+  :hover {
+    opacity: 0.4;
+  }
 `
 
 export const SearchBox = styled.input`
+  outline: none;
+
   position: absolute;
   width: 432px;
   height: 65px;
@@ -143,9 +164,26 @@ export const SearchBox = styled.input`
   backdrop-filter: blur(20px);
 
   border-radius: 46px;
+
+  font-family: Visby Round CF;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 30px;
+
+  padding-left: 45px;
+
+  text-align: justify;
+
+  color: rgba(97, 41, 153, 0.7);
+
+  ::placeholder {
+    color: rgba(97, 41, 153, 0.7);
+  }
 `
 
 export const SearchButton = styled.button`
+  outline: none;
+
   position: absolute;
   width: 82px;
   height: 82px;
@@ -159,7 +197,100 @@ export const SearchButton = styled.button`
 
   border: none;
 
-  background-image: url(${searchIconImg});
   background-repeat: no-repeat;
   background-position: 50%;
+
+  :hover {
+    background-color: ${darken(0.2, '#612999')};
+  }
+`
+
+export const LinearTransitional = styled.div`
+  position: absolute;
+  width: 1928px;
+  height: 168px;
+  /* left: 1924px; */
+  top: 1003px;
+
+  z-index: 1;
+
+  background: linear-gradient(180deg, #f5f1ff 0%, rgba(245, 241, 255, 0) 100%);
+  transform: rotate(-180deg);
+`
+
+export const WideMenu = styled.table`
+  display: flex;
+
+  align-items: center;
+  text-align: center;
+  position: absolute;
+
+  justify-content: space-between;
+
+  width: 1089px;
+  height: 90px;
+
+  left: 263px;
+  top: 1169px;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  td {
+    overflow: hidden;
+
+    padding: 28px;
+
+    white-space: nowrap;
+    align-items: center;
+    justify-content: start;
+
+    height: 100%;
+    display: flex;
+    font-family: Visby Round CF;
+
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+
+    color: #461874;
+
+    :hover {
+      background-color: #612999;
+      color: #ffffff;
+    }
+  }
+`
+
+export const Title = styled.div`
+  font-family: Visby Round CF;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 65px;
+  line-height: 78px;
+  text-align: justify;
+
+  color: #47137c;
+
+  position: absolute;
+
+  left: 147px;
+  top: 1348px;
+`
+export const ContainerItems = styled.div`
+  position: absolute;
+
+  left: 133px;
+  top: 1482px;
+
+  display: flex;
+  flex: 1;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  div ~ div {
+    margin-left: 58px;
+  }
 `
