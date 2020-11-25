@@ -25,9 +25,7 @@ import facebookIconImg from '../assets/facebook.png'
 import twitterIconImg from '../assets/twitter.png'
 import instagramIconImg from '../assets/instagram.png'
 
-import PromoSquareGreen from '../components/PromoSquareGreen'
-import PromoSquareYellow from '../components/PromoSquareYellow'
-import PromoSquarePurple from '../components/PromoSquarePurple'
+import PromoSquare from '../components/PromoSquare'
 
 import ItemsSquare from '../components/ItemsSquare'
 
@@ -64,15 +62,15 @@ const Home: React.FC = () => {
       <InstagramIcon src={instagramIconImg} />
 
       <PromoWideMenu>
-        <PromoSquareGreen
+        <PromoSquare
           backgroundColor="rgba(111, 149, 81, 0.5)"
           promoPinColor="#3e752a"
         />
-        <PromoSquareGreen
+        <PromoSquare
           backgroundColor="rgba(228, 170, 20, 0.5)"
           promoPinColor="#fbc400"
         />
-        <PromoSquareGreen
+        <PromoSquare
           backgroundColor="rgba(106, 86, 125, 0.5)"
           promoPinColor="#612999"
         />

@@ -15,8 +15,26 @@ export const Container = styled.div`
 
   backdrop-filter: blur(5px);
 
-  :hover {
-    background-color: ${darken(0.2, 'rgba(111, 149, 81, 0.5)')};
+  overflow: hidden;
+
+  table:hover {
+    background-color: ${props => darken(0.2, props.color)};
+  }
+
+  table {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    td {
+      display: flex;
+      flex-direction: column;
+    }
+
+    tr {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   h2 {
@@ -74,17 +92,6 @@ export const Container = styled.div`
     margin-left: 35px;
     bottom: 18px;
   }
-`
-
-export const Collum1 = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-`
-
-export const Collum2 = styled.div`
-  display: flex;
-  flex-direction: column;
 `
 
 export const PromoOff = styled.div`
