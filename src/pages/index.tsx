@@ -8,6 +8,7 @@ import {
   FacebookIcon,
   TwitterIcon,
   InstagramIcon,
+  PromoWideMenu,
   SearchBox,
   SearchButton,
   AsideMenu,
@@ -62,9 +63,20 @@ const Home: React.FC = () => {
       <TwitterIcon src={twitterIconImg} />
       <InstagramIcon src={instagramIconImg} />
 
-      <PromoSquareGreen />
-      <PromoSquareYellow />
-      <PromoSquarePurple />
+      <PromoWideMenu>
+        <PromoSquareGreen
+          backgroundColor="rgba(111, 149, 81, 0.5)"
+          promoPinColor="#3e752a"
+        />
+        <PromoSquareGreen
+          backgroundColor="rgba(228, 170, 20, 0.5)"
+          promoPinColor="#fbc400"
+        />
+        <PromoSquareGreen
+          backgroundColor="rgba(106, 86, 125, 0.5)"
+          promoPinColor="#612999"
+        />
+      </PromoWideMenu>
 
       <LinearTransitional />
 

@@ -3,20 +3,16 @@ import { darken } from 'polished'
 
 export const Container = styled.div`
   display: flex;
-  position: absolute;
+  position: relative;
 
   width: 351px;
   height: 162px;
-
-  left: 690px;
-  top: 780px;
 
   padding: 0;
   margin: 0;
 
   border-radius: 19px;
 
-  background-color: rgba(111, 149, 81, 0.5);
   backdrop-filter: blur(5px);
 
   :hover {

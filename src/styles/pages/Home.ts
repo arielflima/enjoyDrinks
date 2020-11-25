@@ -149,6 +149,20 @@ export const InstagramIcon = styled.img`
   }
 `
 
+export const PromoWideMenu = styled.div`
+  position: absolute;
+
+  left: 690px;
+  top: 780px;
+
+  display: flex;
+  flex: 1;
+
+  div ~ div {
+    margin-left: 49px;
+  }
+`
+
 export const SearchBox = styled.input`
   outline: none;
 
