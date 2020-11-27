@@ -1,12 +1,23 @@
 import React from 'react'
 
-import { Container, CircleIcon } from '../styles/components/ItemsSquare'
+import {
+  Container,
+  ImageDiv,
+  CircleIcon
+} from '../styles/components/ItemsSquare'
 
-import shoppingBasketIcon from '../assets/shoppingBasket.png'
+import { BiBasket } from 'react-icons/bi'
 
-const components: React.FC = () => {
+interface drinkProps {
+  drinkImage: string
+}
+
+const ItemsSquare: React.FC<drinkProps> = ({ drinkImage }) => {
   return (
     <Container>
+      <ImageDiv>
+        <img src={drinkImage} />
+      </ImageDiv>
       <span>Stranberry and blue</span>
       <h3>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi mauris.
@@ -14,10 +25,10 @@ const components: React.FC = () => {
 
       <h2>$15.00 us</h2>
       <CircleIcon>
-        <img src={shoppingBasketIcon} />
+        <BiBasket size={40} color="#fff" />
       </CircleIcon>
     </Container>
   )
 }
 
-export default components
+export default ItemsSquare

@@ -19,6 +19,10 @@ import {
   ContainerItems
 } from '../styles/pages/Home'
 
+import { BiSearchAlt } from 'react-icons/bi'
+
+import SideCartMenu from '../components/SideCartMenu'
+
 import imgBackground from '../assets/background.png'
 import menuIcon from '../assets/menuIcon.png'
 import facebookIconImg from '../assets/facebook.png'
@@ -28,8 +32,10 @@ import instagramIconImg from '../assets/instagram.png'
 import PromoSquare from '../components/PromoSquare'
 
 import ItemsSquare from '../components/ItemsSquare'
-
-import searchIconImg from '../assets/searchIcon.png'
+import drink1 from '../assets/drink1.png'
+import drink2 from '../assets/drink2.png'
+import drink3 from '../assets/drink3.png'
+import drink4 from '../assets/drink4.png'
 
 const Home: React.FC = () => {
   return (
@@ -44,9 +50,13 @@ const Home: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi mauris
           arcu aenean in mauris elementum sed non. In sapien enim
         </p>
-        <SearchBox type="search" placeholder="Search your drink" />
-        <SearchButton>
-          <img src={searchIconImg} />
+        <SearchBox
+          className="searchBarPosition"
+          type="search"
+          placeholder="Search your drink"
+        />
+        <SearchButton className="searchButtonPosition">
+          <BiSearchAlt size={40} color="#fff" />
         </SearchButton>
       </AsideMenu>
       <DropMenuIcon src={menuIcon} />
@@ -75,6 +85,9 @@ const Home: React.FC = () => {
           promoPinColor="#612999"
         />
       </PromoWideMenu>
+      <SideCartMenu>
+        <h1>teste</h1>
+      </SideCartMenu>
 
       <LinearTransitional />
 
@@ -89,10 +102,10 @@ const Home: React.FC = () => {
       <Title>Popular Drinks</Title>
 
       <ContainerItems>
-        <ItemsSquare />
-        <ItemsSquare />
-        <ItemsSquare />
-        <ItemsSquare />
+        <ItemsSquare drinkImage={drink1} />
+        <ItemsSquare drinkImage={drink2} />
+        <ItemsSquare drinkImage={drink3} />
+        <ItemsSquare drinkImage={drink4} />
       </ContainerItems>
     </Container>
   )

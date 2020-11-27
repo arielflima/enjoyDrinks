@@ -13,12 +13,6 @@ export const Container = styled.div`
   display: flex;
 
   h1 {
-    position: absolute;
-    width: 432px;
-    height: 191px;
-    left: 102px;
-    top: 319px;
-
     font-family: Visby Round CF;
     font-style: normal;
     font-weight: bold;
@@ -41,14 +35,6 @@ export const Container = styled.div`
   }
 
   p {
-    position: absolute;
-
-    width: 501px;
-    height: 96px;
-
-    left: 108px;
-    top: 510px;
-
     font-family: Visby Round CF;
     font-weight: 500;
     font-size: 25px;
@@ -65,13 +51,43 @@ export const BackgroundImg = styled.img`
   position: relative;
 
   z-index: 0;
-  /* bottom: -10px; */
 `
 
 export const AsideMenu = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
+
+  position: absolute;
+
+  left: 102px;
+  top: 319px;
+
+  h1 {
+    width: 432px;
+    height: 191px;
+  }
+
+  p {
+    width: 501px;
+    height: 96px;
+
+    position: absolute;
+    left: 0px;
+    top: 192px;
+  }
+
+  .searchBarPosition {
+    position: absolute;
+    left: 0px;
+    top: 350px;
+  }
+
+  .searchButtonPosition {
+    position: absolute;
+    left: 450px;
+    top: 340px;
+  }
 `
 export const DropMenuIcon = styled.img`
   position: absolute;
@@ -166,11 +182,8 @@ export const PromoWideMenu = styled.div`
 export const SearchBox = styled.input`
   outline: none;
 
-  position: absolute;
   width: 432px;
   height: 65px;
-  left: 102px;
-  top: 661px;
 
   border: none;
 
@@ -290,6 +303,7 @@ export const Title = styled.div`
   left: 147px;
   top: 1348px;
 `
+
 export const ContainerItems = styled.div`
   position: absolute;
 

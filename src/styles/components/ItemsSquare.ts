@@ -4,6 +4,9 @@ import { darken } from 'polished'
 export const Container = styled.div`
   position: relative;
 
+  max-width: 100%;
+  max-height: 100%;
+
   width: 376px;
   height: 496px;
 
@@ -15,6 +18,8 @@ export const Container = styled.div`
   :hover {
     background-color: ${darken(0.2, '#ffffff')};
   }
+
+  overflow: hidden;
 
   span {
     position: absolute;
@@ -44,7 +49,7 @@ export const Container = styled.div`
     font-size: 18px;
     line-height: 22px;
 
-    color: #c8c8c8;
+    color: #a8a8a8;
 
     top: 342px;
     left: 32px;
@@ -76,9 +81,7 @@ export const CircleIcon = styled.div`
   position: absolute;
 
   top: 404px;
-  left: 262px;
-  right: 51px;
-  bottom: 29px;
+  left: 222px;
 
   width: 63px;
   height: 63px;
@@ -87,19 +90,22 @@ export const CircleIcon = styled.div`
 
   background-color: #612999;
 
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
   :hover {
     background-color: ${darken(0.2, '#612999')};
   }
+`
 
-  img {
-    position: absolute;
+export const ImageDiv = styled.div`
+  display: flex;
+  flex: 1;
 
-    width: 31px;
-    height: 31px;
-    left: 411px;
-    top: 14px;
-    right: 16px;
-    left: 16px;
-    bottom: 18px;
-  }
+  max-height: 282px;
+
+  border-radius: 25px;
+
+  overflow: hidden;
 `
