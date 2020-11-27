@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { Container, CartItem } from '../styles/components/SideCartMenu'
+import {
+  Container,
+  CartItem,
+  FooterCheckout
+} from '../styles/components/SideCartMenu'
 
 import { BiBasket } from 'react-icons/bi'
 
@@ -34,25 +38,30 @@ const SideCartMenu: React.FC = () => {
             <h3>$12.00</h3>
             <br />
             <span>
-              <button
-                type="button"
-                className="button buttonLess"
-                style={{ backgroundColor: 'rgba(97, 41, 153, 0.2)' }}
-              >
+              <button type="button" className="button buttonLess">
                 -
               </button>
               <h4>2</h4>
-              <button
-                type="button"
-                className="button buttonMore"
-                style={{ backgroundColor: '#612999' }}
-              >
+              <button type="button" className="button buttonMore">
                 +
               </button>
             </span>
           </td>
         </tr>
       </CartItem>
+      <FooterCheckout>
+        <table>
+          <tr>
+            <td className="leftSide">Delivery</td>
+            <td className="rightSide">Free</td>
+          </tr>
+          <tr>
+            <td className="leftSide">Total</td>
+            <td className="rightSide">45.00 usd</td>
+          </tr>
+        </table>
+        <button type="button">CHECKOUT</button>
+      </FooterCheckout>
     </Container>
   )
 }

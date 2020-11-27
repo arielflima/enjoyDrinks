@@ -1,6 +1,9 @@
 import styled from 'styled-components'
+import { darken } from 'polished'
 
 export const Container = styled.div`
+  z-index: 500;
+
   position: absolute;
   width: 651px;
   height: 1179px;
@@ -12,7 +15,7 @@ export const Container = styled.div`
   .titleBar {
     position: absolute;
 
-    top: 129px;
+    top: 59px;
     left: 100px;
 
     tr {
@@ -50,7 +53,7 @@ export const Container = styled.div`
 export const CartItem = styled.table`
   position: absolute;
 
-  top: 250px;
+  top: 180px;
   left: 26px;
 
   display: flex;
@@ -149,11 +152,94 @@ export const CartItem = styled.table`
     }
 
     .buttonLess {
+      background-color: rgba(97, 41, 153, 0.2);
       color: #000;
+
+      &:hover {
+        background-color: ${darken(0.2, 'rgba(97, 41, 153, 0.2)')};
+      }
     }
 
     .buttonMore {
+      background-color: #612999;
       color: #fff;
+
+      &:hover {
+        background-color: ${darken(0.2, '#612999')};
+      }
+    }
+  }
+`
+
+export const FooterCheckout = styled.span`
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+
+  bottom: 10px;
+  left: 0px;
+
+  width: 100%;
+  height: 305px;
+
+  padding-left: 35px;
+  padding-top: 16px;
+
+  border-top: 2px solid #d9d9d9;
+
+  td {
+    padding: 15px;
+  }
+
+  .leftSide {
+    font-family: Visby Round CF;
+    font-size: 25px;
+    line-height: 105.7%;
+    font-weight: 500;
+
+    color: #bbbbbb;
+    width: 67%;
+  }
+
+  .rightSide {
+    font-family: Visby Round CF;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 105.7%;
+
+    color: #612999;
+    width: 40%;
+  }
+
+  button {
+    width: 559px;
+    height: 112px;
+
+    background: #612999;
+    border-radius: 19px;
+    border: none;
+
+    font-family: Visby Round CF;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 42px;
+
+    text-align: justify;
+    letter-spacing: 0.2em;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+    &:hover {
+      background-color: ${darken(0.2, '#612999')};
     }
   }
 `
