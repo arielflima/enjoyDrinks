@@ -27,28 +27,29 @@ const SideCartMenu: React.FC = () => {
           </td>
         </tr>
       </table>
-      <CartItem>
-        <tr>
-          <td id="tdPicture">
-            <img src={drink1} />
-          </td>
-          <td id="tdDescription">
-            <h2>Blueberry Special</h2>
-            <br />
-            <h3>$12.00</h3>
-            <br />
-            <span>
-              <button type="button" className="button buttonLess">
+      <div className="cart">
+        <CartItem>
+          <span className="imgSpan">
+            <img src={drink1} className="drinkImg" />
+          </span>
+          <span className="contentSpan">
+            <h3>Blueberry Special</h3> <br />
+            <h4>$12.00</h4> <br />
+            <span className="counterSpan">
+              <button type="button" className="buttonLess">
                 -
               </button>
-              <h4>2</h4>
-              <button type="button" className="button buttonMore">
+              2
+              <button type="button" className="buttonMore">
                 +
               </button>
             </span>
-          </td>
-        </tr>
-      </CartItem>
+          </span>
+        </CartItem>
+        <CartItem />
+        <CartItem />
+      </div>
+
       <FooterCheckout>
         <table>
           <tr>

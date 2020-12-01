@@ -15,7 +15,7 @@ export const Container = styled.div`
   .titleBar {
     position: absolute;
 
-    top: 59px;
+    top: 80px;
     left: 100px;
 
     tr {
@@ -48,65 +48,87 @@ export const Container = styled.div`
       }
     }
   }
+
+  .cart {
+    position: absolute;
+
+    left: 4px;
+    top: 170px;
+  }
 `
 
-export const CartItem = styled.table`
-  position: absolute;
-
-  top: 180px;
-  left: 26px;
-
+export const CartItem = styled.div`
   display: flex;
 
-  tr {
+  width: 538px;
+  height: 110px;
+
+  margin: 46px;
+
+  .imgSpan {
     display: flex;
-    display: 1;
 
-    align-items: center;
-
-    width: 537.58px;
+    width: 195px;
     height: 109px;
 
     overflow: hidden;
 
-    #tdPicture {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    align-items: center;
 
-      width: 195px;
-      height: 109px;
-
-      overflow: hidden;
-
-      border-radius: 15px;
-    }
-
-    #tdDescription {
-      display: flex;
-
-      padding-left: 32px;
-      flex-direction: column;
-    }
+    border-radius: 15px;
   }
 
-  img {
+  .contentSpan {
+    padding-left: 32px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid red;
+  }
+
+  .drinkImg {
     width: 212px;
     height: 141px;
   }
 
-  h2 {
-    font-family: Visby Round CF;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 105.7%;
+  .counterSpan {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
 
-    color: #461874;
+    .buttonLess {
+      color: #000;
+      background: rgba(97, 41, 153, 0.2);
 
-    position: absolute;
+      &:hover {
+        background: ${darken(0.2, 'rgba(97, 41, 153, 0.2)')};
+      }
+    }
 
-    top: 0px;
+    .buttonMore {
+      color: #fff;
+      background: #612999;
+
+      &:hover {
+        background: ${darken(0.2, '#612999')};
+      }
+    }
+
+    button {
+      width: 24px;
+      height: 20px;
+
+      border-radius: 4px;
+
+      border: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 18px;
+    }
   }
 
   h3 {
@@ -116,58 +138,17 @@ export const CartItem = styled.table`
     font-size: 25px;
     line-height: 105.7%;
 
-    color: #ae8dd0;
-
-    position: absolute;
-
-    bottom: 45px;
+    color: #461874;
   }
 
   h4 {
     font-family: Visby Round CF;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 105.7%;
 
-    color: #612999;
-
-    padding-left: 11px;
-    padding-right: 11px;
-  }
-
-  span {
-    display: flex;
-    align-items: center;
-
-    position: absolute;
-
-    bottom: 10px;
-
-    .button {
-      width: 24px;
-      height: 20px;
-      border-radius: 4px;
-      border: none;
-    }
-
-    .buttonLess {
-      background-color: rgba(97, 41, 153, 0.2);
-      color: #000;
-
-      &:hover {
-        background-color: ${darken(0.2, 'rgba(97, 41, 153, 0.2)')};
-      }
-    }
-
-    .buttonMore {
-      background-color: #612999;
-      color: #fff;
-
-      &:hover {
-        background-color: ${darken(0.2, '#612999')};
-      }
-    }
+    color: #ae8dd0;
   }
 `
 

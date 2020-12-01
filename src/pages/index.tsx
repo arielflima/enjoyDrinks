@@ -21,8 +21,6 @@ import {
 
 import { BiSearchAlt } from 'react-icons/bi'
 
-import SideCartMenu from '../components/SideCartMenu'
-
 import imgBackground from '../assets/background.png'
 import menuIcon from '../assets/menuIcon.png'
 import facebookIconImg from '../assets/facebook.png'
@@ -85,9 +83,6 @@ const Home: React.FC = () => {
           promoPinColor="#612999"
         />
       </PromoWideMenu>
-      <SideCartMenu>
-        <h1>teste</h1>
-      </SideCartMenu>
 
       <LinearTransitional />
 
