@@ -1,7 +1,5 @@
 # Enjoy Drinks
 
-##### Land Page to drinks sales
-
 ![Enjoy Drinks Sample](https://user-images.githubusercontent.com/43911808/100796666-bddd3500-33ff-11eb-8387-a9f3eebd8719.gif)
 
 This project was developed with the following
